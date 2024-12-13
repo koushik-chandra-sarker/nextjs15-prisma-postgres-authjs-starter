@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn, CreateDateColumn, UpdateDateColumn } from "typeorm";
 import { User } from "./User";
-import {AbstractEntity} from "@/backend/entity/AbstractEntity";
+import {AbstractEntity} from "@/backend/entities/AbstractEntity";
 
 @Entity("customers")
 export class Customer extends AbstractEntity {
@@ -23,6 +23,4 @@ export class Customer extends AbstractEntity {
 
   @Column({ default: true })
   isActive!: boolean;
-  @Column({ default: true })
-  isdd!: boolean;
 }

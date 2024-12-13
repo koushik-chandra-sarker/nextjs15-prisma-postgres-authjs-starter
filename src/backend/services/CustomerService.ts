@@ -1,7 +1,7 @@
 
-import { Customer } from "@/backend/entity/Customer";
-import { User } from "@/backend/entity/User";
-import {AppDataSource} from "@/backend/config/db";
+import { Customer } from "@/backend/entities/Customer";
+import { User } from "@/backend/entities/User";
+import AppDataSource from "@/backend/config/datasource";
 
 export class CustomerService {
     private customerRepository = AppDataSource.getRepository(Customer);

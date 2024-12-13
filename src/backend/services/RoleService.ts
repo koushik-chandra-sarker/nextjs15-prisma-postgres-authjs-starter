@@ -1,6 +1,6 @@
 
-import { Role } from "@/backend/entity/Role";
-import {AppDataSource} from "@/backend/config/db";
+import { Role } from "@/backend/entities/Role";
+import AppDataSource from "@/backend/config/datasource";
 
 export class RoleService {
     private roleRepository = AppDataSource.getRepository(Role);

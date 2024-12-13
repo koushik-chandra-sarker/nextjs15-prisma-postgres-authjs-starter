@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
 import { User } from "./User";
-import {AbstractEntity} from "@/backend/entity/AbstractEntity";
+import {AbstractEntity} from "@/backend/entities/AbstractEntity";
 
 @Entity("roles")
 export class Role extends AbstractEntity {
