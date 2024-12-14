@@ -1,0 +1,8 @@
+model Profile {
+  id          String   @id @default(cuid())  // Unique profile ID
+  bio         String?                       // Optional bio
+  avatarUrl   String?                       // Avatar URL
+  dateOfBirth DateTime?                     // Date of birth
+  gender      String?                       // Gender
+  userId      String   @unique              // Foreign key for User
+}

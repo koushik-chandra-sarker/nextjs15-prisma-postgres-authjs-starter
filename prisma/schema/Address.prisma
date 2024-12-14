@@ -1,0 +1,10 @@
+model Address {
+  id         String   @id @default(cuid())  // Unique address ID
+  street     String                          // Street
+  city       String                          // City
+  state      String                          // State
+  postalCode String                          // ZIP code
+  country    String                          // Country
+  isDefault  Boolean   @default(false)       // Is default address
+  userId     String                          // Foreign key for User
+}

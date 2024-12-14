@@ -1,0 +1,18 @@
+model User {
+  id           String     @id @default(cuid()) // Unique user ID
+  email        String     @unique             // User email
+  password     String                         // Hashed password
+  name         String                         // Full name
+  phoneNumber  String?    @unique             // Optional phone number
+  role         Role[]     @relation("UserRoles")
+  status       UserStatus @default(ACTIVE)    // Account status (enum)
+  createdAt    DateTime   @default(now())     // Creation timestamp
+  updatedAt    DateTime   @updatedAt          // Last updated timestamp
+}
+
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  BANNED
+}
